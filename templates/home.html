@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block menu %}
+    <section class="menu">
+        <a href="{% url 'clientes:clientes-home' %}">
+            <div class="box container-1">
+                <i class="fas fa-users fa-4x"></i>
+                <h2>Clientes</h2>
+            </div>
+        </a>
+        <a href="{% url 'clientes:pagos-home' %}">
+            <div class="box container-2">
+                <i class="fas fa-dollar-sign fa-4x"></i>
+                <h2>Pagos</h2>
+            </div>
+        </a>
+        <a href="">
+            <div class="box container-3">
+                <i class="far fa-clipboard fa-4x"></i>
+                <h2>Reclamos</h2>
+            </div>
+        </a>
+        <a href="">
+            <div class="box container-4">
+                <i class="fas fa-tasks fa-4x"></i>
+                <h2>Tareas</h2>
+            </div>
+        </a>
+
+        <a href="{% url 'materiales:home-materiales' %}">
+            <div class="box container-4">
+                <i class="fas fa-toolbox fa-4x"></i>
+                <h2>Materiales</h2>
+            </div>
+        </a>
+
+    </section>
+
+
+{% endblock %}

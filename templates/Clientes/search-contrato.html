@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block busqueda-clientes-contrato %}
+
+    <div class="container">
+            <h1>Contratos</h1>
+        <form id="form-busqueda" action="{% url 'clientes:busqueda-contratos-clientes' %}" method="GET">
+            <label for="id_busqueda"> Ingrese el apellido o número de cédula del cliente</label>
+            <input id="id_busqueda" type="text" placeholder="BUSCAR CONTRATO." name="busqueda" maxlength="100" required>
+            <button class="buscar">Buscar</button>
+{#            <div id="cliente-contrato"><a href="{{ cliente.get_absolute_url }}">{{ cliente }}</a></div>#}
+            <div class="clientes">
+                {% if clientes_contrato %}
+                    <ul>
+                        {% for persona in clientes_contrato %}
+                            <li><a href="{{ persona.get_absolute_url}}">{{ persona }}</a></li>
+
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </form>
+
+    </div>
+
+{% endblock %}
+

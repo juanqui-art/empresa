@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block cliente-creado %}
+
+    <div class="info-creado">
+        <h2 class="title-contrato-creado">CONTRATO NUEVO CREADO EXITOSAMENTE</h2>
+        <div class="buttons-clientes-exito">
+            <a href="{% url 'users:home' %}"><button>Home</button></a>
+            <a href="{% url 'clientes:contrato-nuevo' %}"><button>Nuevo Contrato</button></a>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block material-creado-exito %}
+    <h3>Item Creado</h3>
+    {% if img_obj %}
+            <h3>Imagen Cargada con éxito: {{ img_obj.nombre_producto }}</h3>
+            <img src="{{ img_obj.imagen.url }}" alt="" style="max-height: 300px">
+        {% endif %}
+{% endblock %}

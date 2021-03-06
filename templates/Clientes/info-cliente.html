@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block info-cliente %}
+    <h3>Información del Cliente</h3>
+    <div class="card-info-cliente">
+        <p><span>Nombre: </span>{{ cliente }}</p>
+        <p><span>Cedula: </span>{{ cliente.cedula }}</p>
+        <p><span>Fecha de Contrato: </span>{{ cliente_contrato.fecha_contrato }}</p>
+        <p><span>Fecha de Instalación: </span>{{ cliente.fecha_de_instalacion }}</p>
+        <p><span>Dirección: </span>{{ cliente.address.upper }}</p>
+        <p><span>Teléfono celular: </span>{{ cliente.telefono_celular }}</p>
+        <p>
+            {% if  cliente.activo %}
+                El cliente está Activo
+
+            {% else %}
+                El cliente no está Activo
+            {% endif %}
+        </p>
+    </div>
+
+{% endblock %}

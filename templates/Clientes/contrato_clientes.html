@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block form-contrato %}
+    <div class="container-form">
+        <h1 id="title-contrato">Contrato Nuevo</h1>
+        {#        <form class="contrato-clientes" action="{% url 'clientes:contrato-nuevo' %}" method="post">#}
+        {#            {% csrf_token %}#}
+        {#            {{ form.as_ul}}#}
+        {#            <input class="btn-submit" type="submit" value="Submit">#}
+        {#        </form>#}
+        {#        #}
+        <form class="contrato-clientes" action="{% url 'clientes:contrato-nuevo' %}" method="post">
+            {% csrf_token %}
+            {% for non_field_error in form.non_field_errors %}
+                <p>{{ non_field_error }}</p>
+            {% endfor %}
+            {% for field in form %}
+                <div class="container-input">
+                    {{ field }}
+                    <label for="{{ field.id_for_label }}"><span>{{ field.label }}:</span></label>
+
+                    {% if field.help_text %}
+                        <p >{{ fiel.help_text }}</p>
+
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <p class="error-field">{{ error }}</p>
+
+                    {% endfor %}
+
+                </div>
+
+            {% endfor %}
+            <input class="btn-submit" type="submit" value="Submit">
+        </form>
+        {#                <form class="contrato-clientes" action="" method="POST">#}
+        {#                    {% csrf_token %}#}
+        {##}
+        {##}
+        {#                    {{ form.non_field_errors }}#}
+        {#                    <div class="container-input">#}
+        {#                        <input id="id_first_name" type="text" maxlength="100" required name="first_name"/>#}
+        {#                        <label for="id_first_name">#}
+        {#                            <span>Nombre:</span>#}
+        {#                        </label>#}
+        {#                    </div>#}
+        {#                    <div class="container-input">#}
+        {#                        <input id="id_last_name" type="text" name="last_name" maxlength="100" required>#}
+        {#                        <label for="id_last_name">#}
+        {#                            <span>Apellido:</span>#}
+        {#                        </label>#}
+        {#                    </div>#}
+        {#                    <div class="container-input">#}
+        {#                        <input id="id_cedula" type="text" name="cedula" maxlength="10" required>#}
+        {#                        <label for="id_cedula">#}
+        {#                            <span>Cédula:</span>#}
+        {#                            {{ form.cedula.errors }}#}
+        {#                        </label>#}
+        {#                    </div>#}
+        {#                    <div class="container-input">#}
+        {#                        <input id="id_telefono_celular" type="tel" name="telefono_celular" maxlength="10" required>#}
+        {#                        <label for="id_address">#}
+        {#                            <span>Teléfono:</span>#}
+        {#                        </label>#}
+        {#                    </div>#}
+        {#                    <div class="container-input">#}
+        {#                        <input id="id_address" type="text" name="address" maxlength="100" required>#}
+        {#                        <label for="id_address">#}
+        {#                            <span>Dirección</span>#}
+        {#                        </label>#}
+        {#                    </div>#}
+        {#                    <div class="container-input">#}
+        {#                        <input id="id_valor_contrato" type="number" name="valor_contrato" maxlength="100" required>#}
+        {#                        <label for="id_valor_contrato">#}
+        {#                            <span>Valor de Contrato:</span>#}
+        {#                        </label>#}
+        {#                    </div>#}
+        {##}
+        {#                    <input class="btn-submit" type="submit" value="Enviar">#}
+        {#                    {{ form.errors }}#}
+        {#                </form>#}
+
+    </div>
+{% endblock %}
+
+
+

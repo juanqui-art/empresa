@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'login/css/login.css' %}" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+          rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d71507d461.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+    <form action="" method="POST" id="form-grid">
+        {% csrf_token %}
+
+        {#  <div class="imgcontainer">#}
+        {#    <img src="{% static 'login/imagenes/covers.jpg' %}" alt="Avatar" class="avatar">#}
+        {#  </div>#}
+
+        <div class="container-form">
+            <div class="container-login">
+                <h1 id="login">login</h1>
+
+            </div>
+            <div class="username-password">
+                <div class="container-username">
+                    <label for="username"><b>Nombre de Usuario:</b></label>
+                    <div class="user-name-icon">
+
+                        <i id="icon-user" class="fas fa-user fa-lg"></i>
+                        <input id="username" type="text" placeholder="Ingrese el nombre de usuario" name="username"
+                               autocomplete="off" required>
+                    </div>
+                </div>
+                <div class="container-password">
+
+                    <label for="password"><b>Contraseña:</b></label>
+                    <div class="password-icon">
+                        <i id="password-icon" class="fas fa-key"></i>
+                        <input id="password" type="password" placeholder="Ingrese la contraseña" autocomplete="off"
+                               name="password"
+                               required>
+                    </div>
+                </div>
+            </div>
+            {% for message in messages %}
+                <p style=" font-size:12px; color: #d23939; text-align: center" id="message">{{ message }}</p>
+            {% endfor %}
+
+            <div class="container-button">
+                <button type="submit">Ingresar</button>
+            </div>
+            {#            <label>#}
+            {#                <input type="checkbox" checked="checked" name="remember"> Remember me#}
+            {#            </label>#}
+        </div>
+
+
+    </form>
+</div>
+
+</body>
+</html>

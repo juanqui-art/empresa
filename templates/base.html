@@ -1,0 +1,60 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/home.css' %}">
+    <link rel="stylesheet" href="{% static 'search/search_page.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d71507d461.js" crossorigin="anonymous"></script>
+
+    <title>
+        {% block title %}{% endblock %}
+        {% block title-clientes %}{% endblock %}
+    </title>
+</head>
+<body>
+
+<nav>
+    <p id="logo">Logo</p>
+    <ul class="nav-links">
+        <li id="home"><a href="{% url 'users:home' %}">Home</a></li>
+        <li id="user">Usuario: {{ user }}</li>
+        <li id="logout"><a href="{% url 'users:logout' %}">Logout</a></li>
+
+    </ul>
+
+</nav>
+<main>
+
+    {% block menu %}{% endblock %}
+    {% block clientes %}{% endblock %}
+    {% block form-contrato %}{% endblock %}
+    {% block busqueda-clientes %}{% endblock %}
+    {% block lista-clientes %}{% endblock %}
+    {% block info-cliente %}{% endblock %}
+    {% block cliente-creado %}{% endblock %}
+    {% block info-contrato-clientes %}{% endblock %}
+    {% block busqueda-clientes-contrato %}{% endblock %}
+    {% block activar_cliente %}{% endblock %}
+    {% block form_materiales %}{% endblock %}
+    {% block cliente_materiales_form %} {% endblock %}
+    {% block menu-materiales %}{% endblock %}
+    {% block material-creado-exito %}{% endblock %}
+    {% block menu-pagos %}{% endblock %}
+
+
+</main>
+<footer>
+    <p>juanqui@ Todos los derechos reservados.</p>
+
+</footer>
+</body>
+</html>

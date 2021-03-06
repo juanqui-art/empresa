@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block cliente_materiales_form %}
+    <h1>Materiales</h1>
+    <h3>{{ cliente }}</h3>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {{ form }}
+
+        <h3>Materiales Instalación</h3>
+
+        {% for form in formset %}
+            {{ form}}
+            <hr>
+        {% endfor %}
+        {{ formset.management_form }}
+        <input type="submit" value="Guardar">
+    </form>
+
+{% endblock %}

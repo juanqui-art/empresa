@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block form_materiales %}
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border-color: #EA9618;
+
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2a3e60;
+        }
+    </style>
+    <div class="container-form">
+        <h3 class="title-form-item">Creación de Item</h3>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Enviar">
+        </form>
+
+    </div>
+
+    <div>
+        {% if img_obj %}
+            <h3>Imagen Cargada con éxito: {{ img_obj.nombre_producto }}</h3>
+            <img src="{{ img_obj.imagen.url }}" alt="" style="max-height: 300px">
+        {% endif %}
+    </div>
+
+    <div style="overflow-x:auto;">
+        <table>
+            <h3>Lista de Items</h3>
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Imagen</th>
+            </tr>
+
+            {% for item in lista_materiales %}
+                <tr>
+                    <td>{{ item.codigo }}</td>
+                    <td>{{ item.nombre_producto }}</td>
+                    <td>{{ item.marca }}</td>
+                    <td><img src="{{ item.imagen.url }}" alt="" style="width: 30px;height: auto"></td>
+
+
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+{% endblock %}

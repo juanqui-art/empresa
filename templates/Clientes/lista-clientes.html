@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block lista-clientes %}
+    <div class="container-listado-clientes">
+        <h3>Listado de clientes</h3>
+        <div class="container-filter">
+            <h4>Filtro</h4>
+            <form action="" method="get">
+                {{ myFilter.form }}
+                <br>
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+        <table class="lista-clientes">
+            <thead class="head-tabla-lista-clientes">
+            <tr class="table100-head">
+                <th class="column1">Nombres</th>
+                <th class="column2">Apellidos</th>
+                <th class="column3">Dirección</th>
+                <th class="column4">Cédula</th>
+                <th class="column5">Teléfono</th>
+                <th class="column6">Email</th>
+                <th class="column6">Activo</th>
+                <th class="column6">Editar</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for cliente in clientes %}
+                <tr>
+                    <td>{{ cliente.first_name }}</td>
+                    <td>{{ cliente.last_name }}</td>
+                    <td>{{ cliente.address }}</td>
+                    <td>{{ cliente.cedula }}</td>
+                    <td>{{ cliente.telefono_celular }}</td>
+                    <td>{{ cliente.email }}</td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td><a href="">Editar</a></td>
+
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

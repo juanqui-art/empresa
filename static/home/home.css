@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 18px;
+    font-family: Poppins, serif;
+    color: #EBEAEA;
+}
+
+body {
+    background-image: linear-gradient(135deg, #1f2934, #0d1218);
+}
+
+main {
+    width: 100%;
+    height: 80vh;
+}
+
+/* NavBar */
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    border-bottom: 1px solid #929292;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+
+    z-index: 3;
+}
+
+#logo {
+    width: 39%;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    width: 54%;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+
+.nav-links #contact a {
+    color: #EBEAEA;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-links #user {
+    word-spacing: 8px;
+}
+
+.nav-links #home a {
+    color: #ebeaea;
+    text-decoration: none;
+}
+
+.nav-links #home a:hover {
+    color: orange;
+
+}
+
+#logout {
+    text-decoration: none;
+}
+
+#logout a {
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 9px;
+    color: #ebeaea;
+    width: 90px;
+    height: 30px;
+    text-decoration: none;
+    background-color: #EA9618;
+}
+
+#logout a:hover {
+    background-color: #d7a340;
+    color: #ebeaea;
+}
+
+#logout a:active {
+    margin-top: 5px;
+}
+
+/*Menu Section*/
+.menu-materials,
+.menu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-flow: wrap;
+    align-items: center;
+}
+
+.menu-materials a,
+.menu a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.box {
+    width: 136px;
+    position: relative;
+    height: 186px;
+    margin: 36px;
+    display: flex;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(45, 59, 74, 0.54);
+    border-radius: 9px;
+    border: 1px solid #1d1c1c;
+    box-shadow: 3px 3px 6px #000000;
+    cursor: pointer;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    transition: all 300ms;
+    backdrop-filter: blur(120px);
+}
+
+.box:hover {
+    background-color: #41505d;
+    background-image: linear-gradient(135deg, #495a69, #181f28);
+}
+
+.box:active {
+    top: 3px;
+    box-shadow: 0 0;
+}
+
+.box h2 {
+    font-weight: 300;
+}
+
+.container-6 p {
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    border-top: 1px solid #929292;
+    font-size: 0.7rem;
+    display: flex;
+    z-index: 1;
+    color: #EBEAEA;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Menu Materiales*/
+
+
+/* Color Theme Swatches in Hex */
+.dashboard-1-hex {
+    color: #323157;
+}
+
+.dashboard-2-hex {
+    color: #364061;
+}
+
+.dashboard-3-hex {
+    color: #2D3B4A;
+}
+
+.dashboard-4-hex {
+    color: #365661;
+}
+
+.dashboard-5-hex {
+    color: #315756;
+}
+
+/* Color Theme Swatches in RGBA */
+.dashboard-1-rgba {
+    color: rgba(50, 49, 87, 1);
+}
+
+.dashboard-2-rgba {
+    color: rgba(54, 64, 97, 1);
+}
+
+.dashboard-3-rgba {
+    color: rgba(45, 59, 74, 1);
+}
+
+.dashboard-4-rgba {
+    color: rgba(54, 86, 97, 1);
+}
+
+.dashboard-5-rgba {
+    color: rgba(49, 87, 86, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.dashboard-1-hsla {
+    color: hsla(241, 27, 26, 1);
+}
+
+.dashboard-2-hsla {
+    color: hsla(226, 28, 29, 1);
+}
+
+.dashboard-3-hsla {
+    color: hsla(211, 24, 23, 1);
+}
+
+.dashboard-4-hsla {
+    color: hsla(195, 28, 29, 1);
+}
+
+.dashboard-5-hsla {
+    color: hsla(178, 27, 26, 1);
+}
+
+
+/*Cliente creado con éxito*/
+
+.info-creado {
+    width: 100%;
+    height: 27vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-contrato-creado {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.activar button,
+.buttons-clientes-exito a button {
+    width: 6.9rem;
+    height: 2rem;
+    margin: 0.6rem;
+    background: #EA9618;
+    font-size: 0.81rem;
+    cursor: pointer;
+    font-family: Poppins, serif;
+    color: #ebeaea;
+    border-radius: 3px;
+    border: none;
+    position: relative;
+    outline: none;
+
+}
+
+.buttons-clientes-exito button:hover {
+    background: #e5aa51;
+    border-style: none;
+}
+
+.buttons-clientes-exito button:active {
+    position: relative;
+    top: 5px;
+}
+
+/* TARJETA INFORMACION CONTRATO */
+
+.container-card-info-contrato-cliente {
+    width: 100%;
+    height: 78vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+.card_info_contrato_clientes {
+    font-size: 0.72rem;
+    padding: 1rem;
+    width: 339px;
+    height: 72%;
+    border: 1px solid #bebdbd;
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 auto;
+    background: #212d37;
+    box-shadow: 6px 6px 3px #090909;
+}
+
+.card_info_contrato_clientes .section {
+    color: #b0afaf;
+    padding: 3px;
+}
+
+.card_info_contrato_clientes .title {
+    color: #b7b6b6;
+}
+
+.card_info_contrato_clientes .section .data {
+    color: whitesmoke;
+    padding: 1px;
+    font-size: 15px;
+
+}
+
+/*.activar {*/
+/*    width: 6rem;*/
+/*    height: 1.7rem;*/
+/*    background: orange;*/
+/*    text-align: center;*/
+/*    border-radius: 3px;*/
+/*    text-decoration: none;*/
+/*    color: whitesmoke;*/
+/*    position: relative;*/
+/*}*/
+
+/*.activar:hover {*/
+/*    background: #ecc182;*/
+/*    color: #545454;*/
+/*}*/
+
+.activar:active {
+    background: #ecc182;
+    color: #262626;
+    top: 3px;
+}
+
+/* Form Nuevo contrato*/
+
+
+.container-form {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#title-contrato {
+    font-size: 1.8rem;
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contrato-clientes {
+    width: 45%;
+    height: 477px;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    overflow: hidden;
+    font-family: Poppins, serif;
+    font-weight: 300;
+}
+
+.container-input {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.container-input input {
+
+    width: 100%;
+    height: 51px;
+    padding-top: 27px;
+    border: none;
+    font-size: 18px;
+    border-bottom: 1px solid #0c0c0c;
+    outline: none;
+    color: #cfc9c9;
+    background-color: rgba(13, 29, 62, 0.001)
+
+
+}
+
+.contrato-clientes .container-input .error-field {
+    font-size: 11px;
+    color: #e74848;
+    align-self: center;
+    justify-self: center;
+    letter-spacing: 1px;
+}
+
+.container-input label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+
+
+}
+
+.container-input #id_valor_contrato[type=number]::-webkit-inner-spin-button,
+.container-input #id_valor_contrato[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container-input label::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 102%;
+    height: 100%;
+    top: -16px;
+    border-bottom: 2px solid dodgerblue;
+    transform: translateX(-101%);
+    transition: all 300ms linear;
+}
+
+.container-input label span {
+    position: relative;
+    top: 6px;
+    transition: all 250ms linear;
+
+
+}
+
+.container-input input:focus + label span,
+.container-input input:valid + label span {
+    top: -6px;
+    color: dodgerblue;
+    font-size: 15px;
+
+
+}
+
+.container-input input:focus + label::after {
+    transform: translateX(0%);
+}
+
+.btn-submit {
+    grid-area: 7/1/8/-1;
+    width: 72px;
+    height: 30px;
+    align-self: center;
+    justify-self: center;
+    background-color: orange;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 3px;
+    color: whitesmoke;
+    box-shadow: 2px 2px 2px #1a1919;
+    transition: all 540ms 250ms;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #f3b65b;
+    width: 132px;
+    color: #202A34;
+}
+
+.errors ul li {
+    color: red;
+    font-size: 18px;
+    list-style: none;
+}
+
+.errorlist {
+    font-size: 12px;
+    color: red;
+}
+
