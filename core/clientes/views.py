@@ -8,6 +8,12 @@ from core.clientes.forms import BusquedaForm, ContratoForm, ClientesForm, Ordene
 from core.clientes.models import ContratoClientes, Clientes, OrdenesTrabajoClientes
 
 
+def dashboard(request):
+    clientes = Clientes.objects.all()
+    context = {'clientes': clientes}
+    return render(request, 'home.html', context)
+
+
 def busqueda_clientes(request):
     my_form = BusquedaForm
     busqueda = request.GET.get('busqueda')
@@ -149,5 +155,3 @@ def lista_clientes(request):
     clientes = myFilter.qs
     context = {'clientes': clientes, 'myFilter': myFilter}
     return render(request, 'Clientes/lista-clientes.html', context)
-
-

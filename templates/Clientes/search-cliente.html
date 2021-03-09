@@ -2,28 +2,29 @@
 
 {% block busqueda-clientes %}
 
-    <div class="container">
-        <form id="form-busqueda" action="{% url 'clientes:busqueda-clientes' %}" method="GET">
-            <label for="id_busqueda"> Ingrese el apellido o número de cédula del cliente</label>
-            <input id="id_busqueda" type="text" placeholder="BUSCAR ..." name="busqueda" maxlength="100" required>
-            <button class="buscar">Buscar</button>
-            <div id="cliente"><a href="{{ cliente.get_absolute_url }}">{{cliente}}</a></div>
-            <div class="clientes">
-                {% if clientes %}
-                    <ul>
-                        {% for cliente in clientes %}
-                            <li><a href="{{ cliente.get_absolute_url}}">{{ cliente }}</a></li>
 
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </div>
-        </form>
+    <form class="form-busqueda-clientes" action="{% url 'clientes:busqueda-clientes' %}" method="GET">
+        <label for="id_busqueda"> Ingrese el apellido o número de cédula del cliente</label>
+        <input id="id_busqueda" type="text" placeholder="BUSCAR ..." name="busqueda" maxlength="100" required>
+        <input class="button-buscar" type="submit" value="Buscar">
+{#        <input class="buscar" value="Buscar"></input>#}
 
-        <div class="test">
 
-        </div>
+    </form>
+
+    <div id="tabla-busqueda-clientes"><a href="{{ cliente.get_absolute_url }}">{{ cliente }}</a>
+    <div class="clientes">
+        {% if clientes %}
+            <ul>
+                {% for cliente in clientes %}
+                    <li><a href="{{ cliente.get_absolute_url }}">{{ cliente }}</a></li>
+
+                {% endfor %}
+            </ul>
+        {% endif %}
     </div>
+    </div>
+
 
 
 

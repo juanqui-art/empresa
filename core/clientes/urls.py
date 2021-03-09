@@ -9,11 +9,12 @@ from core.clientes.views import (busqueda_clientes,
                                  informacion_cliente,
                                  materiales_despues_activacion_cliente,
                                  lista_clientes,
+                                 dashboard,
                                  )
 
 app_name = 'clientes'
 urlpatterns = [
-    path('home/', TemplateView.as_view(template_name='Clientes/clientes-home.html'), name='clientes-home'),
+    path('dashboard/', dashboard, name='dashboard'),
     path('busqueda_clientes/', busqueda_clientes, name='busqueda-clientes'),
     path('informacion_cliente/<str:id>/', informacion_cliente, name='informacion-cliente'),
     path('busqueda_contratos_clientes', busqueda_contratos_clientes, name='busqueda-contratos-clientes'),
