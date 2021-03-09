@@ -36,7 +36,7 @@
             </form>
         </div>
         <ul class="nav-links">
-            <li><a href="">Dashboard</a></li>
+            <li><a href="{% url 'clientes:clientes-home' %}">Dashboard</a></li>
             <li><a href="">Logout</a></li>
             <div class="user">
                 <span class="material-icons">account_circle</span>
@@ -57,8 +57,8 @@
                 </div>
                 <span class="material-icons">keyboard_arrow_right</span>
                 <ul class="lista-clientes lista-dashboard">
-                    <li><a href="">Información Cliente</a></li>
-                    <li><a href="">Contratos Nuevos</a></li>
+                    <li><a href="{% url 'clientes:busqueda-clientes' %}">Información Cliente</a></li>
+                    <li><a href="{% url 'clientes:contrato-nuevo' %}">Contratos Nuevos</a></li>
                     <li><a href="">Activacion Contrato</a></li>
                     <li><a href="">Lista de Clientes</a></li>
                 </ul>
@@ -101,6 +101,11 @@
 
     </div>
 
+    <div>
+             {% block busqueda-clientes %}{% endblock %}
+        {% block form-contrato %}{% endblock %}
+    </div>
+
     <!-- Contenido Dinámico -->
 
 
@@ -131,7 +136,7 @@
     {#    {% block menu %}{% endblock %}#}
     {#    {% block clientes %}{% endblock %}#}
     {#    {% block form-contrato %}{% endblock %}#}
-    {#    {% block busqueda-clientes %}{% endblock %}#}
+
     {#    {% block lista-clientes %}{% endblock %}#}
     {#    {% block info-cliente %}{% endblock %}#}
     {#    {% block cliente-creado %}{% endblock %}#}
