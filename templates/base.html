@@ -12,41 +12,40 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <link rel="stylesheet" href="{% static 'home/home.css' %}">
-    <link rel="stylesheet" href="{% static 'search/search_page.css' %}">
+    {#    <link rel="stylesheet" href="{% static 'search/search_page.css' %}">#}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d71507d461.js" crossorigin="anonymous"></script>
-
     <title>
         {% block title %}{% endblock %}
         {% block title-clientes %}{% endblock %}
     </title>
 </head>
 <body>
-
 <div class="container">
+
+    <!-- Nav Section -->
+
     <nav>
         <div class="logo-search">
             <h3>LOGO</h3>
             <!--                    <img src="logocbVision.png" alt="">-->
             <form class="form-search-nav" action="" method="GET">
-
                 <input type="text" placeholder="BUSCAR...">
                 <span class="material-icons">search</span>
-
-
             </form>
         </div>
         <ul class="nav-links">
             <li><a href="">Dashboard</a></li>
             <li><a href="">Logout</a></li>
-
             <div class="user">
                 <span class="material-icons">account_circle</span>
                 <p>JUAN QUIZHPI</p>
             </div>
         </ul>
     </nav>
+
+    <!-- SideBar Section -->
 
 
     <div class="sidebar">
@@ -101,62 +100,57 @@
         </div>
 
     </div>
-    <div class="total-clientes box-dashboard">
-        <p>Clientes Activos</p>
-        <h3>993</h3>
 
-    </div>
-    <div class="reclamos-clientes box-dashboard">
-        <p>Total de Reclamos</p>
-        <h3>99</h3>
+    <!-- Contenido Dinámico -->
 
-    </div>
-    <div class="cortes-clientes box-dashboard">
-        <p>Cortes de Servicio</p>
-        <h3>99</h3>
 
-    </div>
+    {#    <div class="total-clientes box-dashboard">#}
+    {#        <p>Clientes Activos</p>#}
+    {#        <h3>993</h3>#}
+    {##}
+    {#    </div>#}
+    {#    <div class="reclamos-clientes box-dashboard">#}
+    {#        <p>Total de Reclamos</p>#}
+    {#        <h3>99</h3>#}
+    {##}
+    {#    </div>#}
+    {#    <div class="cortes-clientes box-dashboard">#}
+    {#        <p>Cortes de Servicio</p>#}
+    {#        <h3>99</h3>#}
+    {##}
+    {#    </div>#}
+    {##}
+    {#    <div class="reinstalaciones-clientes box-dashboard">#}
+    {#        <p>Reinstalaciones </p>#}
+    {#        <h3>9</h3>#}
+    {##}
+    {#    </div>#}
 
-    <div class="reinstalaciones-clientes box-dashboard">
-        <p>Reinstalaciones </p>
-        <h3>9</h3>
+{#    <main>#}
+    {##}
+    {#    {% block menu %}{% endblock %}#}
+    {#    {% block clientes %}{% endblock %}#}
+    {#    {% block form-contrato %}{% endblock %}#}
+    {#    {% block busqueda-clientes %}{% endblock %}#}
+    {#    {% block lista-clientes %}{% endblock %}#}
+    {#    {% block info-cliente %}{% endblock %}#}
+    {#    {% block cliente-creado %}{% endblock %}#}
+    {#    {% block info-contrato-clientes %}{% endblock %}#}
+    {#    {% block busqueda-clientes-contrato %}{% endblock %}#}
+    {#    {% block activar_cliente %}{% endblock %}#}
+    {#    {% block form_materiales %}{% endblock %}#}
+    {#    {% block cliente_materiales_form %} {% endblock %}#}
+    {#    {% block menu-materiales %}{% endblock %}#}
+    {#    {% block material-creado-exito %}{% endblock %}#}
+    {#    {% block menu-pagos %}{% endblock %}#}
+    {##}
+    {##}
+    {#</main>#}
 
-    </div>
+
 </div>
 
-{#<nav>#}
-{#    <p id="logo">Logo</p>#}
-{#    <ul class="nav-links">#}
-{#        <li id="home"><a href="{% url 'users:home' %}">Home</a></li>#}
-{#        <li id="user">Usuario: {{ user }}</li>#}
-{#        <li id="logout"><a href="{% url 'users:logout' %}">Logout</a></li>#}
-{##}
-{#    </ul>#}
-{##}
-{#</nav>#}
-{#<main>#}
-{##}
-{#    {% block menu %}{% endblock %}#}
-{#    {% block clientes %}{% endblock %}#}
-{#    {% block form-contrato %}{% endblock %}#}
-{#    {% block busqueda-clientes %}{% endblock %}#}
-{#    {% block lista-clientes %}{% endblock %}#}
-{#    {% block info-cliente %}{% endblock %}#}
-{#    {% block cliente-creado %}{% endblock %}#}
-{#    {% block info-contrato-clientes %}{% endblock %}#}
-{#    {% block busqueda-clientes-contrato %}{% endblock %}#}
-{#    {% block activar_cliente %}{% endblock %}#}
-{#    {% block form_materiales %}{% endblock %}#}
-{#    {% block cliente_materiales_form %} {% endblock %}#}
-{#    {% block menu-materiales %}{% endblock %}#}
-{#    {% block material-creado-exito %}{% endblock %}#}
-{#    {% block menu-pagos %}{% endblock %}#}
-{##}
-{##}
-{#</main>#}
-{#<footer>#}
-{#    <p>juanqui@ Todos los derechos reservados.</p>#}
-{##}
-{#</footer>#}
+
+
 </body>
 </html>
