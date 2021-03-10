@@ -281,27 +281,15 @@ nav li a:hover:after {
 
 .form-busqueda-clientes #id_busqueda {
     width: 72%;
-
-
-
-
-
-
+    position: relative;
 }
 
-#tabla-busqueda-clientes{
-    grid-area: 3 / 3 / 6 / 6;
-    background: #4c4b4b;
+.form-busqueda-clientes span {
+    position: absolute;
+    left: 81%;
+    color: #4c4b4b;
 }
 
-/*#form-busqueda #icon_search{*/
-/*    position: absolute;*/
-/*    top: 42px;*/
-/*    z-index: 9;*/
-/*    color: #403f3f;*/
-/*    right: 15%;*/
-
-/*}*/
 
 .form-busqueda-clientes .button-buscar {
     width: 12%;
@@ -316,25 +304,62 @@ nav li a:hover:after {
     border: none;
 
 }
-.form-busqueda-clientes .button-buscar:hover{
+
+.form-busqueda-clientes .button-buscar:hover {
     background-color: #f5b75f;
 }
 
-.form-busqueda-clientes  .button-buscar:active{
+.form-busqueda-clientes .button-buscar:active {
     position: relative;
     top: 3px;
 }
 
-#form-busqueda #cliente{
 
-    font-size: 15px;
-    color: #bfb5b5;
+/* listado de Clientes Form */
+
+#container-clientes-encontrados {
+    grid-area: 3 / 3 / 6 / 6;
+
+
+}
+
+.box-clientes-encontrados {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.box-clientes-encontrados .title-clientes {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 22px;
+
+}
+
+.listado-clientes-encotrados {
+    overflow: scroll;
+
 }
 
 
+.listado-clientes-encotrados p a {
+    color: #676666;
+    text-decoration: none;
+    height: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 400;
+}
 
-
-
+.listado-clientes-encotrados p a:hover {
+    color: #035d7e;
+}
 
 /*body {*/
 /*    background-image: linear-gradient(135deg, #1f2934, #0d1218);*/

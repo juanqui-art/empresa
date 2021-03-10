@@ -6,23 +6,30 @@
     <form class="form-busqueda-clientes" action="{% url 'clientes:busqueda-clientes' %}" method="GET">
         <label for="id_busqueda"> Ingrese el apellido o número de cédula del cliente</label>
         <input id="id_busqueda" type="text" placeholder="BUSCAR ..." name="busqueda" maxlength="100" required>
+        <span class="material-icons">search</span>
         <input class="button-buscar" type="submit" value="Buscar">
-{#        <input class="buscar" value="Buscar"></input>#}
+        {#        <input class="buscar" value="Buscar"></input>#}
 
 
     </form>
-
-    <div id="tabla-busqueda-clientes"><a href="{{ cliente.get_absolute_url }}">{{ cliente }}</a>
-    <div class="clientes">
+    <div id="container-clientes-encontrados">
+            {% if cliente %}
+                <div id="cliente-encontrado">
+                    <a href="{{ cliente.get_absolute_url }}">{{ cliente }}</a>
+                </div>
+            {% endif %}
         {% if clientes %}
-            <ul>
-                {% for cliente in clientes %}
-                    <li><a href="{{ cliente.get_absolute_url }}">{{ cliente }}</a></li>
+            <div class="box-clientes-encontrados">
+                <h3 class="title-clientes">Clientes Activos</h3>
 
-                {% endfor %}
-            </ul>
+                <div class="listado-clientes-encotrados">
+                    {% for cliente in clientes %}
+                        <p><a href="{{ cliente.get_absolute_url }}">{{ cliente|capfirst }}</a></p>
+                    {% endfor %}
+                </div>
+            </div>
         {% endif %}
-    </div>
+
     </div>
 
 
