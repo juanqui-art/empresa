@@ -37,13 +37,13 @@ class ContratoForm(forms.ModelForm):
 
 
 class BusquedaForm(forms.Form):
-    busqueda = forms.CharField(max_length=100)
+    busqueda = forms.CharField(max_length=100, required=False, )
 
-    def clean_busqueda(self):
-        busqueda_cliente = self.cleaned_data.get('busqueda')
-        if len(busqueda_cliente) == 0:
-            raise forms.ValidationError('No ha ingresado ninguna consulta')
-        return busqueda_cliente
+    # def clean_busqueda(self):
+    #     busqueda_cliente = self.cleaned_data.get('busqueda')
+    #     if len(busqueda_cliente) == 0:
+    #         raise forms.ValidationError('No ha ingresado ninguna consulta')
+    #     return busqueda_cliente
 
 
 class ClientesForm(forms.ModelForm):

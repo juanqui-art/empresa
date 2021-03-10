@@ -24,7 +24,7 @@ def busqueda_clientes(request):
                 cliente = Clientes.objects.get(cedula=busqueda)
 
             except Clientes.DoesNotExist:
-                cliente = "No existe el cliente."
+                cliente = "No existe el cliente con ese número de cédula."
             return render(request, 'Clientes/search-cliente.html',
                           {'cliente': cliente, 'form': my_form})
         elif busqueda:

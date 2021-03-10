@@ -8,20 +8,14 @@
         <input id="id_busqueda" type="text" placeholder="BUSCAR ..." name="busqueda" maxlength="100" required>
         <span class="material-icons">search</span>
         <input class="button-buscar" type="submit" value="Buscar">
-        {#        <input class="buscar" value="Buscar"></input>#}
-
-
     </form>
+
     <div id="container-clientes-encontrados">
-            {% if cliente %}
-                <div id="cliente-encontrado">
-                    <a href="{{ cliente.get_absolute_url }}">{{ cliente }}</a>
-                </div>
-            {% endif %}
-        {% if clientes %}
+
+
+        {% if  clientes %}
             <div class="box-clientes-encontrados">
                 <h3 class="title-clientes">Clientes Activos</h3>
-
                 <div class="listado-clientes-encotrados">
                     {% for cliente in clientes %}
                         <p><a href="{{ cliente.get_absolute_url }}">{{ cliente|capfirst }}</a></p>
@@ -30,15 +24,29 @@
             </div>
         {% endif %}
 
+        {% if  cliente %}
+            <div class="box-clientes-encontrados">
+                <a href="{{ cliente.get_absolute_url }}">{{ cliente }}</a>
+            </div>
+        {% endif %}
+
+
+        {##}
+        {#        {% elif cliente is None %}#}
+        {#            <div class="box-clientes-encontrados">#}
+        {#                <p>No hay un cliente con este número de cédula</p>#}
+        {#            </div>#}
+        {#        {% endif %}#}
+        {##}
+
+
     </div>
 
 
-
-
-    {#    {% if form.errors %}#}
-    {#        {{ form.errors }}#}
+    {#        {% if form.errors %}#}
+    {#            {{ form.errors }}#}
     {##}
-    {#    {% endif %}#}
+    {#        {% endif %}#}
 
 {% endblock %}
 

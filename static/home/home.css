@@ -271,6 +271,7 @@ nav li a:hover:after {
 
 .form-busqueda-clientes {
     grid-area: 2 / 3 / 3 / 6;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -336,6 +337,7 @@ nav li a:hover:after {
 .box-clientes-encontrados .title-clientes {
     width: 100%;
     padding: 1rem;
+    color: #4c4b4b;
     text-align: center;
     font-weight: 400;
     font-size: 22px;
@@ -347,7 +349,7 @@ nav li a:hover:after {
 
 }
 
-
+.box-clientes-encontrados a,
 .listado-clientes-encotrados p a {
     color: #676666;
     text-decoration: none;
@@ -357,6 +359,7 @@ nav li a:hover:after {
     font-weight: 400;
 }
 
+.box-clientes-encontrados a:hover,
 .listado-clientes-encotrados p a:hover {
     color: #035d7e;
 }
