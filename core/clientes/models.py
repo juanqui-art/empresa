@@ -13,6 +13,7 @@ class CommonInfoClientes(models.Model):
         'unique': 'El cliente con este número de cédula ya existe',
     })
     telefono_celular = models.CharField(max_length=10)
+    telefono_domicilio = models.CharField(max_length=10)
     address = models.CharField(max_length=100)
 
     def __str__(self):

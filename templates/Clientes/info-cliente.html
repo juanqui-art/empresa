@@ -19,11 +19,11 @@
                         <i class="fa fa-home fa-2x"></i>
                         <span class="date">Dirección</span>
                     </div>
-                    <p>{{ cliente.address}}</p>
+                    <p>{{ cliente.address|upper}}</p>
                 </div>
 
                 <div class="cedula field">
-                    <div>
+                    <div class="icon-title-info">
                         <i class="fa fa-address-card fa-2x"></i>
                         <span>Número de cédula</span>
                     </div>
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="celular field">
-                    <div>
+                    <div class="icon-title-info">
                         <i class="fa fa-mobile fa-2x"></i>
                         <span>Teléfono celular</span>
                     </div>
@@ -39,15 +39,15 @@
                 </div>
 
                 <div class="telefono-domicilio field">
-                    <div>
+                    <div class="icon-title-info">
                         <i class="fa fa-phone fa-2x"></i>
                         <span>Teléfono domicilio</span>
                     </div>
-                    <span class="date"></span>
+                    <span class="date">{{ cliente.telefono_domicilio }}</span>
                 </div>
 
                 <div class="fecha-instalacion field">
-                    <div>
+                    <div class="icon-title-info">
                         <i class="fa fa-calendar fa-2x"></i>
                         <span>Fecha de Instalación</span>
                     </div>
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="estado-cliente field">
-                    <div>
+                    <div class="icon-title-info">
                         <i class="fa fa-exclamation fa-2x"></i>
                         <span>Estado</span>
                     </div>
