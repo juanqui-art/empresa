@@ -3,6 +3,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
+from core.clientes.models import Clientes
+
 
 def login_page(request):
     if request.method == 'POST':
@@ -20,7 +22,9 @@ def login_page(request):
 
 @login_required(redirect_field_name='login')
 def home(request):
-    return render(request, 'home.html')
+    clientes = Clientes.objects.all()
+    context = {'clientes': clientes}
+    return render(request, 'home.html', context)
 
 
 def logout_view(request):

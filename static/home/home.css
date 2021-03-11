@@ -365,108 +365,142 @@ nav li a:hover:after {
 }
 
 
+/* Formulario Contrato Nuevo */
 
 
-/*#logout {*/
-/*    text-decoration: none;*/
-/*}*/
+.container-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    grid-area: 2 / 3 / 6 /6;
 
-/*#logout a {*/
-/*    font-size: 1.1rem;*/
-/*    text-align: center;*/
-/*    border-radius: 6px;*/
-/*    padding: 3px 9px;*/
-/*    color: #ebeaea;*/
-/*    width: 90px;*/
-/*    height: 30px;*/
-/*    text-decoration: none;*/
-/*    background-color: #EA9618;*/
-/*}*/
+}
 
-/*#logout a:hover {*/
-/*    background-color: #d7a340;*/
-/*    color: #ebeaea;*/
-/*}*/
+#title-contrato {
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
 
-/*#logout a:active {*/
-/*    margin-top: 5px;*/
-/*}*/
+.contrato-clientes {
+    width: 69%;
+    height: 81%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-/*!*Menu Section*!*/
-/*.menu-materials,*/
-/*.menu {*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    justify-content: center;*/
-/*    flex-flow: wrap;*/
-/*    align-items: center;*/
-/*}*/
+.container-input {
+    width: 100%;
+    height: 3.6rem;
+    position: relative;
+}
 
-/*.menu-materials a,*/
-/*.menu a {*/
-/*    color: white;*/
-/*    text-decoration: none;*/
+.container-input input {
 
-/*}*/
+    width: 100%;
+    height: 46px;
+    padding-top: 27px;
+    border: none;
+    font-size: 18px;
+    border-bottom: 1px solid #0c0c0c;
+    outline: none;
+    color: #4c4b4b;
+    background-color: rgba(13, 29, 62, 0.001)
 
-/*.box {*/
-/*    width: 136px;*/
-/*    position: relative;*/
-/*    height: 186px;*/
-/*    margin: 36px;*/
-/*    display: flex;*/
-/*    font-size: 0.8rem;*/
-/*    letter-spacing: 1px;*/
-/*    justify-content: space-around;*/
-/*    align-items: center;*/
-/*    flex-direction: column;*/
-/*    background-color: rgba(45, 59, 74, 0.54);*/
-/*    border-radius: 9px;*/
-/*    border: 1px solid #1d1c1c;*/
-/*    box-shadow: 3px 3px 6px #000000;*/
-/*    cursor: pointer;*/
-/*    font-weight: normal;*/
-/*    text-decoration: none;*/
-/*    text-align: center;*/
-/*    transition: all 300ms;*/
-/*    backdrop-filter: blur(120px);*/
-/*}*/
 
-/*.box:hover {*/
-/*    background-color: #41505d;*/
-/*    background-image: linear-gradient(135deg, #495a69, #181f28);*/
-/*}*/
+}
 
-/*.box:active {*/
-/*    top: 3px;*/
-/*    box-shadow: 0 0;*/
-/*}*/
+.contrato-clientes .container-input .error-field {
+    font-size: 11px;
+    color: #d62929;
+    align-self: center;
+    justify-self: center;
+    letter-spacing: 1px;
+}
 
-/*.box h2 {*/
-/*    font-weight: 300;*/
-/*}*/
+.container-input label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
 
-/*.container-6 p {*/
-/*    font-size: 16px;*/
-/*    font-weight: 400;*/
+.container-input #id_valor_contrato[type=number]::-webkit-inner-spin-button,
+.container-input #id_valor_contrato[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
-/*}*/
+.container-input label::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 102%;
+    height: 100%;
+    top: -20px;
+    border-bottom: 2px solid dodgerblue;
+    transform: translateX(-101%);
+    transition: all 300ms linear;
+}
 
-/*footer {*/
-/*    width: 100%;*/
-/*    height: 10vh;*/
-/*    border-top: 1px solid #929292;*/
-/*    font-size: 0.7rem;*/
-/*    display: flex;*/
-/*    z-index: 1;*/
-/*    color: #EBEAEA;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
+.container-input label span {
+    position: relative;
+    top: 6px;
+    transition: all 250ms linear;
 
-/*}*/
 
-/* Menu Materiales*/
+}
+
+.container-input input:focus + label span,
+.container-input input:valid + label span {
+    top: -6px;
+    color: dodgerblue;
+    font-size: 15px;
+
+
+}
+
+.container-input input:focus + label::after {
+    transform: translateX(0%);
+}
+
+.btn-submit {
+    width: 72px;
+    height: 30px;
+    align-self: center;
+    justify-self: center;
+    background-color: orange;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 3px;
+    color: whitesmoke;
+    border: none;
+    transition: all 540ms 250ms;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #f3b65b;
+}
+
+.errors ul li {
+    color: red;
+    font-size: 18px;
+    list-style: none;
+}
+
+.errorlist {
+    font-size: 12px;
+    color: red;
+}
 
 
 /* Color Theme Swatches in Hex */
