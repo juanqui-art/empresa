@@ -1,114 +1,119 @@
 {% extends 'base.html' %}
 
 {% block info-cliente %}
-    <div class="container">
-    <div class="border"></div>
-    <div class="container-info-cliente">
+    <div class="container-info-cliente-adicional">
+        <div class="container-grid-info-cliente-adicional">
 
-        <div class="name-cliente">
-            <i class="fa fa-user fa-2x"></i>
-            <p>Juan Carlos Quizhpi</p>
 
-            <a href="" class="button">Editar</a>
-        </div>
-        <div class="direccion">
-            <div class="icon-title">
-                <i class="fa fa-home fa-2x"></i>
-                <span class="date">Dirección</span>
+            <div class="border-info-cliente-aditional"></div>
+            <div class="container-info-cliente">
+
+                <div class="name-cliente">
+                    <i class="fa fa-user fa-2x"></i>
+                    <p>{{ cliente }}</p>
+
+                    <a href="" class="button">Editar</a>
+                </div>
+                <div class="direccion">
+                    <div class="icon-title">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="date">Dirección</span>
+                    </div>
+                    <p>{{ cliente.address}}</p>
+                </div>
+
+                <div class="cedula field">
+                    <div>
+                        <i class="fa fa-address-card fa-2x"></i>
+                        <span>Número de cédula</span>
+                    </div>
+                    <span class="date">{{ cliente.cedula }}</span>
+                </div>
+
+                <div class="celular field">
+                    <div>
+                        <i class="fa fa-mobile fa-2x"></i>
+                        <span>Teléfono celular</span>
+                    </div>
+                    <span class="date">{{ cliente.telefono_celular }}</span>
+                </div>
+
+                <div class="telefono-domicilio field">
+                    <div>
+                        <i class="fa fa-phone fa-2x"></i>
+                        <span>Teléfono domicilio</span>
+                    </div>
+                    <span class="date"></span>
+                </div>
+
+                <div class="fecha-instalacion field">
+                    <div>
+                        <i class="fa fa-calendar fa-2x"></i>
+                        <span>Fecha de Instalación</span>
+                    </div>
+                    <span class="date">{{ cliente.fecha_de_instalacion|date:"d/ M/ Y"}}</span>
+                </div>
+
+                <div class="estado-cliente field">
+                    <div>
+                        <i class="fa fa-exclamation fa-2x"></i>
+                        <span>Estado</span>
+                    </div>
+                    <span class="date activo">{{ cliente.activo }}</span>
+                </div>
             </div>
-            <p>Gualaceo, Luis Rios Rodriguez y 9-37 Manuel Guillen </p>
+
+                    <!-- Segunda Tarjeta -->
+
+                    <div class="info-adicional">
+
+                        <div class="ultimo-mes-cancelado field-adicional">
+                            <span class="title-aditional">Meses cancelados</span>
+                            <a href="" class="button">Lista</a>
+                            <div class="icon-description">
+                                <i class="fa fa-calendar fa-lg"></i>
+                                <span>Último mes cancelado</span>
+                            </div>
+                            <p class="date-aditional">01/01/2021</p>
+                        </div>
+
+                        <div class="materiales field-adicional">
+                            <span class="title-aditional">Materiales</span>
+                            <a href="" class="button">Lista</a>
+                            <div class="icon-description">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="toolbox"
+                                     class="svg-inline--fa fa-toolbox fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                          d="M502.63 214.63l-45.25-45.25c-6-6-14.14-9.37-22.63-9.37H384V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v80H77.25c-8.49 0-16.62 3.37-22.63 9.37L9.37 214.63c-6 6-9.37 14.14-9.37 22.63V320h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-82.75c0-8.48-3.37-16.62-9.37-22.62zM320 160H192V96h128v64zm64 208c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H192v16c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H0v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96H384v16z"></path>
+                                </svg>
+                                <span>Pendientes de pago</span>
+                            </div>
+                            <p class="date-aditional">9</p>
+                        </div>
+
+                        <div class="reclamos field-adicional">
+                            <span class="title-aditional">Reclamos</span>
+                            <a href="" class="button">Lista</a>
+                            <div class="icon-description">
+                                <i class="fa fa-clipboard fa-lg"></i>
+                                <span>Último reclamo</span>
+                            </div>
+                            <p class="date-aditional">01/01/2021</p>
+                        </div>
+
+                        <div class="cortes-servicio field-adicional">
+                            <span class="title-aditional">Cortes de servicio</span>
+                            <a href="" class="button">Lista</a>
+                            <div class="icon-description">
+                                <i class="fa fa-cut fa-lg"></i>
+                                <span>Último corte</span>
+                            </div>
+                            <p class="date-aditional">01/01/2021</p>
+                        </div>
+
+                    </div>
         </div>
-
-        <div class="cedula field">
-            <div>
-                <i class="fa fa-address-card fa-2x"></i>
-                <span>Número de cédula</span>
-            </div>
-            <span class="date">0103355400</span>
-        </div>
-
-        <div class="celular field">
-            <div>
-                <i class="fa fa-mobile fa-2x"></i>
-                <span>Teléfono celular</span>
-            </div>
-            <span class="date">0984698436</span>
-        </div>
-
-        <div class="telefono-domicilio field">
-            <div>
-                <i class="fa fa-phone fa-2x"></i>
-                <span>Teléfono domicilio</span>
-            </div>
-            <span class="date">2258652</span>
-        </div>
-
-        <div class="fecha-instalacion field">
-            <div>
-                <i class="fa fa-calendar fa-2x"></i>
-                <span>Fecha de Instalación</span>
-            </div>
-            <span class="date">01/01/2021</span>
-        </div>
-
-        <div class="estado-cliente field">
-            <div>
-                <i class="fa fa-exclamation fa-2x"></i>
-                <span>Estado</span>
-            </div>
-            <span class="date activo">Activo</span>
-        </div>
-    </div>
-
-    <!-- Segunda Tarjeta -->
-
-    <div class="info-adicional">
-
-        <div class="ultimo-mes-cancelado field-adicional">
-            <span class="title-aditional">Meses cancelados</span>
-            <a href="" class="button">Lista</a>
-            <div class="icon-description">
-                <i class="fa fa-calendar fa-lg"></i>
-                <span>Último mes cancelado</span>
-            </div>
-            <p class="date-aditional">01/01/2021</p>
-        </div>
-
-        <div class="materiales field-adicional">
-            <span class="title-aditional">Materiales</span>
-            <a href="" class="button">Lista</a>
-            <div class="icon-description">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="toolbox"
-                     class="svg-inline--fa fa-toolbox fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                          d="M502.63 214.63l-45.25-45.25c-6-6-14.14-9.37-22.63-9.37H384V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v80H77.25c-8.49 0-16.62 3.37-22.63 9.37L9.37 214.63c-6 6-9.37 14.14-9.37 22.63V320h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-82.75c0-8.48-3.37-16.62-9.37-22.62zM320 160H192V96h128v64zm64 208c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H192v16c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H0v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96H384v16z"></path>
-                </svg>
-                <span>Pendientes de pago</span>
-            </div>
-            <p class="date-aditional">9</p>
-        </div>
-
-        <div class="reclamos field-adicional">
-            <span class="title-aditional">Reclamos</span>
-            <a href="" class="button">Lista</a>
-            <div class="icon-description">
-                <i class="fa fa-clipboard fa-lg"></i>
-                <span>Último reclamo</span>
-            </div>
-            <p class="date-aditional">01/01/2021</p>
-        </div>
-
-        <div class="cortes-servicio field-adicional">
-            <span class="title-aditional">Cortes de servicio</span>
-            <a href="" class="button">Lista</a>
-            <div class="icon-description">
-                <i class="fa fa-cut fa-lg"></i>
-                <span>Último corte</span>
-            </div>
-            <p class="date-aditional">01/01/2021</p>
-        </div>
-
     </div>
 
 

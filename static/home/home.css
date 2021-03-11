@@ -503,6 +503,226 @@ nav li a:hover:after {
 }
 
 
+/* Sección de Información Cliente*/
+
+
+.container-info-cliente-adicional {
+    grid-area: 2 / 2 / 6 /7;
+
+
+}
+
+.container-grid-info-cliente-adicional {
+    display: grid;
+    grid-template-columns: 1fr 400px 400px 1fr;
+    grid-template-rows: 1fr 540px 1fr;
+
+}
+
+.container-grid-info-cliente-adicional .container-info-cliente {
+    grid-area: 2 / 2 /3 / 3;
+    border: 1px solid #898787;
+    border-radius: 12px;
+    padding: 1.5rem 2rem 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 14px;
+
+}
+
+.name-cliente {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.name-cliente i {
+    width: 100%;
+    color: #333232;
+}
+
+.name-cliente p {
+    width: 15rem;
+    height: 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #333232;
+}
+
+.field-adicional .button,
+.name-cliente .button {
+    width: 3.06rem;
+    padding-top: 2px;
+    text-align: center;
+    background-color: #FF9E36;
+    color: whitesmoke;
+    font-weight: 400;
+    border-radius: 3px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+.field-adicional .button:hover,
+.name-cliente .button:hover{
+    background-color: #D27917;
+}
+.field-adicional .button:active,
+.name-cliente .button:active{
+    top: 3px;
+}
+
+
+.direccion {
+    width: 100%;
+    height: 3.5rem;
+    color: #A4A4A4;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+
+
+}
+
+.direccion p {
+    width: 100%;
+    color: #333232;
+    padding-bottom: 0.24rem;
+    border-bottom: 1px solid #A4A4A4;
+    font-size: 14px;
+}
+
+.direccion .icon-title {
+    margin-left: 3px;
+}
+
+.field {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #A4A4A4;
+    color: #A4A4A4;
+
+}
+
+.field span.date {
+    color: #333232;
+}
+
+
+.celular i {
+    margin-left: 10px;
+}
+
+.celular div span {
+    margin-left: 9px;
+}
+
+.telefono-domicilio i {
+    margin-left: 5px;
+}
+
+.telefono-domicilio div span {
+    margin-left: 5px;
+}
+
+.fecha-instalacion i {
+    margin-left: 3px;
+}
+
+.fecha-instalacion div span {
+    margin-left: 2px;
+}
+
+.estado-cliente i {
+    margin-left: 12px;
+}
+
+.estado-cliente div span {
+    margin-left: 8px;
+}
+
+.border-info-cliente-aditional {
+    grid-area: 2 / 2 /3 / 4;
+    border: 1px solid #898787;
+    border-radius: 12px;
+    background-color: whitesmoke;
+}
+
+.date.activo {
+    font-weight: 500;
+}
+
+/* Aditional Info */
+
+
+.info-adicional {
+    width: 100%;
+    height: 100%;
+    grid-area: 2 / 3 /3 / 4;
+    padding: 4.11rem 2rem 3rem 2rem;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.field-adicional {
+    width: 100%;
+    height: 3.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-bottom: 3px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #A4A4A4;
+}
+
+.field-adicional span {
+    width: 12rem;
+}
+
+.icon-description {
+    width: 14rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    color: #A4A4A4;
+
+
+}
+
+.fa-toolbox {
+    width: 1.5rem;
+    height: 1.6rem;
+    padding-bottom: 7px;
+
+
+}
+
+.field-adicional .title-aditional {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.field-adicional .date-aditional {
+    color: #333232;
+    font-size: 13px;
+    padding-top: 3px;
+    height: 1rem;
+}
+
+
 /* Color Theme Swatches in Hex */
 /*.dashboard-1-hex {*/
 /*    color: #323157;*/
