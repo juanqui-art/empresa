@@ -1,44 +1,30 @@
 {% extends 'base.html' %}
 
 {% block activar_cliente %}
-     <div class="container-form">
-    <h1 id="title-contrato">Activar Cliente</h1>
+    <div class="container-form">
+        <h1 id="title-contrato">Activar Cliente</h1>
 
-    <h3>{{ mensaje }}</h3>
-    <form class="contrato-clientes" action="" method="POST">
-        {% csrf_token %}
-        {#        {{ form.as_p }}#}
-        {#        {{ form.errors }}#}
-        {% for non_field_error in form.non_field_errors %}
-            <p>{{ non_field_error }}</p>
-        {% endfor %}
-        {% for field in form %}
-            <div class="container-input">
-                {{ field }}
-                <label for="{{ field.id_for_label }}"><span>{{ field.label }}:</span></label>
+        <h3>{{ mensaje }}</h3>
+        <form class="contrato-clientes" action="" method="POST">
+            {% csrf_token %}
+            {% for non_field_error in form.non_field_errors %}
+                <p>{{ non_field_error }}</p>
+            {% endfor %}
+            {% for field in form %}
+                <div class="container-input">
+                    {{ field }}
+                    <label for="{{ field.id_for_label }}"><span>{{ field.label }}:</span></label>
+                    {% if field.help_text %}
+                        <p>{{ fiel.help_text }}</p>
+                    {% endif %}
 
-                {% if field.help_text %}
-                    <p>{{ fiel.help_text }}</p>
+                    {% for error in field.errors %}
+                        <p class="error-field">{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <input class="btn-submit" type="submit" value="Submit">
 
-                {% endif %}
-                {% for error in field.errors %}
-                    <p class="error-field">{{ error }}</p>
-
-                {% endfor %}
-
-            </div>
-        {% endfor %}
-                <input class="btn-submit" type="submit" value="Submit">
-
-{#        <input type="submit" value="Activar">#}
-    </form>
-     </div>
-    {#    <h2>Materiales</h2>#}
-    {#    <form action="" method="POST">#}
-    {#        {% csrf_token %}#}
-    {#        {{ formset.as_p}}#}
-    {#        {{ form_orden_trabajo.errors }}#}
-    {#        <input type="submit" value="Activar">#}
-    {#    </form>#}
-
+        </form>
+    </div>
 {% endblock %}

@@ -1,4 +1,3 @@
-from django.contrib.auth.decorators import login_required
 from django.forms import inlineformset_factory
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -7,17 +6,6 @@ from django.urls import reverse
 from core.clientes.filters import ClienteFilters
 from core.clientes.forms import BusquedaForm, ContratoForm, ClientesForm, OrdenesTrabajoClientesForm
 from core.clientes.models import ContratoClientes, Clientes, OrdenesTrabajoClientes
-
-
-# def dashboard(request):
-#     clientes = Clientes.objects.all()
-#     context = {'clientes': clientes}
-#     return render(request, 'home.html', context)
-#
-# @login_required(redirect_field_name='login')
-# def dashboard(request):
-#     return render(request, 'home.html')
-#
 
 
 def busqueda_clientes(request):

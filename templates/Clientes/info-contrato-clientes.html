@@ -1,49 +1,64 @@
 {% extends 'base.html' %}
 {% block info-contrato-clientes %}
 
-    <div class="container-card-info-contrato-cliente">
 
-        <h3>Información del Contrato</h3>
+    <h3 class="title-info-contrato">Información Contrato</h3>
 
-        <div class="card_info_contrato_clientes">
-            <div class="nombre-section section">
-                <p class="nombre-title title">NOMBRE </p>
-                <p class="nombre data">{{ cliente }}</p>
+    <div class="container-info-cliente-contrato">
+        <div class="card-info-clientecontrato">
+            <div class="name-cliente">
+                <i class="fa fa-user fa-2x"></i>
+                <p>{{ cliente }}</p>
+                <a href="{% url 'clientes:activar-cliente' cliente.cedula %}" class="button">Activar</a>
             </div>
-            <div class="cedula-section section">
-                <p class="cedula-title title">CÉDULA </p>
-                <p class="cedula data">{{ cliente.cedula }}</p>
+            <div class="direccion">
+                <div class="icon-title">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="date">Dirección</span>
+                </div>
+                <p>{{ cliente.address|upper }}</p>
             </div>
-            <div class="fecha-contrato-section section">
-                <p class="fecha-contrato-title title">FECHA DE CONTRATO </p>
-                <p class="fecha-contrato data">{{ cliente.fecha_contrato }}</p>
+            <div class="cedula field">
+                <div class="icon-title-info">
+                    <i class="fa fa-address-card fa-2x"></i>
+                    <span>Número de cédula</span>
+                </div>
+                <span class="date">{{ cliente.cedula }}</span>
             </div>
-            <div class="direccion-section section">
-                <p class="direccion-title title">DIRECCIÓN </p>
-                <p class="direccion data">{{ cliente.address| capfirst }}</p>
+            <div class="celular field">
+                <div class="icon-title-info">
+                    <i class="fa fa-mobile fa-2x"></i>
+                    <span>Teléfono celular</span>
+                </div>
+                <span class="date">{{ cliente.telefono_celular }}</span>
             </div>
-            <div class="telefono-celular-section section">
-                <p class="telefon-title title">TELÉFONO CELULAR </p>
-                <p class="telefono data">{{ cliente.telefono_celular }}</p>
+            <div class="telefono-domicilio field">
+                <div class="icon-title-info">
+                    <i class="fa fa-phone fa-2x"></i>
+                    <span>Teléfono domicilio</span>
+                </div>
+                <span class="date">{{ cliente.telefono_domicilio }}</span>
             </div>
-            <div class="valor-contrato-section section">
-                <p class="valor-title title">VALOR CANCELADO </p>
-                <p class="valor data">${{ cliente.valor_contrato }}</p>
+            <div class="fecha-instalacion field">
+                <div class="icon-title-info">
+                    <i class="fa fa-calendar fa-2x"></i>
+                    <span>Fecha de Instalación</span>
+                </div>
+                <span class="date">{{ cliente.fecha_contrato|date:"d/ M/ Y" }}</span>
             </div>
-            <div class="instalado-section section">
+            <div class="estado-cliente field">
+                <div class="icon-title-info">
+                    <i class="fa fa-exclamation fa-2x"></i>
+                    <span>Estado</span>
+                </div>
                 {% if not cliente.instalado %}
-                    <p class="instalado-title title">INSTALADO </p>
-                    <p class="instalado data">No se encuentra instalado.</p>
-                {% else %}
-                    <p>INSTALADO</p>
-                    <p class="instalado data">Instalado</p>
+                <span class="date activo">No instalado</span>
                 {% endif %}
             </div>
-
         </div>
+    </div>
 
 
-            <a class="activar" href="{% url 'clientes:activar-cliente' cliente.cedula %}"><button>Activar</button></a>
 
 
 

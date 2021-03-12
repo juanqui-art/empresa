@@ -59,7 +59,7 @@
                 <ul class="lista-clientes lista-dashboard">
                     <li><a href="{% url 'clientes:busqueda-clientes' %}">Información Cliente</a></li>
                     <li><a href="{% url 'clientes:contrato-nuevo' %}">Contratos Nuevos</a></li>
-                    <li><a href="">Activacion Contrato</a></li>
+                    <li><a href="{% url 'clientes:busqueda-contratos-clientes' %}">Activacion Contrato</a></li>
                     <li><a href="">Lista de Clientes</a></li>
                 </ul>
             </div>
@@ -107,6 +107,10 @@
         {% block form-contrato %}{% endblock %}
         {% block menu %}{% endblock %}
         {% block info-cliente %}{% endblock %}
+        {% block busqueda-clientes-contrato %}{% endblock %}
+        {% block info-contrato-clientes %}{% endblock %}
+        {% block activar_cliente %}{% endblock %}
+
 
 
 
@@ -143,9 +147,8 @@
 
     {#    {% block lista-clientes %}{% endblock %}#}
     {#    {% block cliente-creado %}{% endblock %}#}
-    {#    {% block info-contrato-clientes %}{% endblock %}#}
-    {#    {% block busqueda-clientes-contrato %}{% endblock %}#}
-    {#    {% block activar_cliente %}{% endblock %}#}
+
+
     {#    {% block form_materiales %}{% endblock %}#}
     {#    {% block cliente_materiales_form %} {% endblock %}#}
     {#    {% block menu-materiales %}{% endblock %}#}

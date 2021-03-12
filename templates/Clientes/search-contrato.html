@@ -2,26 +2,31 @@
 
 {% block busqueda-clientes-contrato %}
 
-    <div class="container">
-            <h1>Contratos</h1>
-        <form id="form-busqueda" action="{% url 'clientes:busqueda-contratos-clientes' %}" method="GET">
-            <label for="id_busqueda"> Ingrese el apellido o número de cédula del cliente</label>
-            <input id="id_busqueda" type="text" placeholder="BUSCAR CONTRATO." name="busqueda" maxlength="100" required>
-            <button class="buscar">Buscar</button>
-{#            <div id="cliente-contrato"><a href="{{ cliente.get_absolute_url }}">{{ cliente }}</a></div>#}
-            <div class="clientes">
-                {% if clientes_contrato %}
-                    <ul>
-                        {% for persona in clientes_contrato %}
-                            <li><a href="{{ persona.get_absolute_url}}">{{ persona }}</a></li>
+    {#    <div class="container">#}
+    {#            <h1>Contratos</h1>#}
 
-                        {% endfor %}
-                    </ul>
-                {% endif %}
+    <form class="form-busqueda-clientes" action="{% url 'clientes:busqueda-contratos-clientes' %}" method="GET">
+        <label for="id_busqueda"> Ingrese el apellido o número de cédula del cliente</label>
+        <input id="id_busqueda" type="text" placeholder="BUSCAR CONTRATO." name="busqueda" maxlength="100" required>
+        <input class="button-buscar" type="submit" value="Buscar">
+    </form>
+
+    <div id="container-clientes-encontrados">
+        {% if  clientes_contrato %}
+            <div class="box-clientes-encontrados">
+                <h3 class="title-clientes">Contratos no instalados</h3>
+                <div class="listado-clientes-encotrados">
+                    {% for cliente_contrato in clientes_contrato %}
+                        <p><a href="{% url 'clientes:informacion-cliente-contrato' cliente_contrato.cedula %}">{{ cliente_contrato|capfirst }}</a></p>
+                    {% endfor %}
+                </div>
             </div>
-        </form>
-
+        {% endif %}
     </div>
+
+
+
+    {#    </div>#}
 
 {% endblock %}
 
